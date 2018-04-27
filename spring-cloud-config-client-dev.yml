@@ -1,0 +1,10 @@
+server:
+  port: 8003 #应用端口号
+  
+spring:
+    cloud:
+        config:
+            allowOverride: true
+            failFast: true
+            overrideNone: true #覆盖非系统属性　true不覆盖
+            overrideSystemProperties: false #覆盖系统属性 false不覆盖
