@@ -1,1 +1,47 @@
-test= 88888888888888888888888888
+spring:
+  cloud:
+    redis :
+     host : localhost
+     port : 6379
+     pool :
+      max-idle : 8
+      min-idle : 0
+      max-active : 8
+      max-wait :  -1
+    timeout : 0
+    password :
+    mvc :
+     favicon :
+     enabled : false
+  datasource :
+    driver-class-name : com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/shiro?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    username : root
+    password : hanzl
+    initialSize : 1
+    minIdle : 1
+    maxActive : 20
+debug : true
+logging :
+  level :
+    tk :
+     mybatis : TRACE
+    com :
+      study : trace
+    org :
+      springframework :
+        web : DEBUG
+mybatis :
+  type-aliases-package : com.dayanjf.client.model
+  mapper-locations : lasspath:mapper/*.xml
+mapper :
+  mappers : com.dayanjf.client.mapper.MyMapper
+  not-empty : false
+  identity : MYSQL
+pagehelper :
+  helperDialect : mysql
+  reasonable : true
+  supportMethodsArguments : true
+  params : count\=countSql
+
+
