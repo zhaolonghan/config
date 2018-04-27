@@ -1,15 +1,1 @@
-server:
-  port: 8888
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/zhaolonghan/config
-          search-paths : /**
-          username : 182036137@qq.com
-          password : hanzl88509!
-eureka:
-  client:
-    serviceUrl:
-      defaultZone : http://localhost:${server.port}/eureka/
+server.port= 88888888888888888888888888
